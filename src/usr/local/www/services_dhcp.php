@@ -1473,6 +1473,7 @@ if (!is_numeric($pool) && !($act == "newpool")) {
 						<th><?=gettext("IP address")?></th>
 						<th><?=gettext("Hostname")?></th>
 						<th><?=gettext("Description")?></th>
+						<th><?=gettext("DNS1")?></th>
 						<th></th>
 					</tr>
 				</thead>
@@ -1510,6 +1511,9 @@ if (!is_numeric($pool) && !($act == "newpool")) {
 						</td>
 						<td ondblclick="document.location='services_dhcp_edit.php?if=<?=htmlspecialchars($if)?>&amp;id=<?=$i?>';">
 							<?=htmlspecialchars($mapent['descr'])?>
+						</td>
+						<td ondblclick="document.location='services_dhcp_edit.php?if=<?=htmlspecialchars($if)?>&amp;id=<?=$i?>';">
+							<?=htmlspecialchars($mapent['dnsserver'][0])?>
 						</td>
 						<td>
 							<a class="fa fa-pencil"	title="<?=gettext('Edit static mapping')?>"	href="services_dhcp_edit.php?if=<?=htmlspecialchars($if)?>&amp;id=<?=$i?>"></a>
